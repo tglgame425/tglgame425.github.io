@@ -204,7 +204,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2026-01-18 12:08:34 / 修改时间：22:36:36" itemprop="dateCreated datePublished" datetime="2026-01-18T12:08:34+08:00">2026-01-18</time>
+      <time title="创建时间：2026-01-18 12:08:34 / 修改时间：23:55:08" itemprop="dateCreated datePublished" datetime="2026-01-18T12:08:34+08:00">2026-01-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -234,17 +234,17 @@
 <p>3、如果还没有github账号，也需要去注册一个。<br>进入github的官网：<a target="_blank" rel="noopener" href="https://github.com/">https://github.com</a><br>点击Sign up，填写账号信息，即可注册。<br>请科学上网，否则经常会出现网络问题。</p>
 <p>4、配置SSH密钥<br>为了能够安全地将本地的博客代码推送到github仓库，而且每次不需要输入github的用户名和密码，我们需要配置SSH密钥。<br>① 在git bash中输入以下命令，生成SSH密钥：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -P <span class="string">&quot;&quot;</span> -f ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-<p>这会在<code>~/.ssh/</code>目录下生成<code>id_rsa</code>和<code>id_rsa.pub</code>两个文件，分别是私钥和公钥。<br>windows下面的路径是<code>C:\Users\your_username\.ssh\</code>，其中<code>your_username</code>为自己的用户名。<br>② 将公钥添加到github账号<br>将<code>id_rsa.pub</code>文件打开，将其中的内容复制到github账号的SSH Keys中。<br>进入github的官网，点击头像，选择Settings，然后选择SSH and GPG keys，点击New SSH key，将公钥粘贴到Key字段中，Title字段随便起个什么名字就可以。<br><img src="/image-3.png" alt="alt text"></p>
-<p>5、配置完成后，需要在github上创建一个新的仓库，仓库的名称为<code>your_username.github.io</code>，其中<code>your_username</code>为自己的github用户名。<br>比如我的github用户名是<code>tglgame425</code>，那么仓库的名称就应该是<code>tglgame425.github.io</code>。<br><img src="/image.png" alt="alt text"><br><strong>注意：仓库的名称必须是<code>your_username.github.io</code>哦</strong>  </p>
+<p>这会在<code>~/.ssh/</code>目录下生成<code>id_rsa</code>和<code>id_rsa.pub</code>两个文件，分别是私钥和公钥。<br>windows下面的路径是<code>C:\Users\your_username\.ssh\</code>，其中<code>your_username</code>为自己的用户名。<br>② 将公钥添加到github账号<br>将<code>id_rsa.pub</code>文件打开，将其中的内容复制到github账号的SSH Keys中。<br>进入github的官网，点击头像，选择Settings，然后选择SSH and GPG keys，点击New SSH key，将公钥粘贴到Key字段中，Title字段随便起个什么名字就可以。<br><img src="/2026/01/18/first-blog/image-3.png" alt="alt text"></p>
+<p>5、配置完成后，需要在github上创建一个新的仓库，仓库的名称为<code>your_username.github.io</code>，其中<code>your_username</code>为自己的github用户名。<br>比如我的github用户名是<code>tglgame425</code>，那么仓库的名称就应该是<code>tglgame425.github.io</code>。<br><img src="/2026/01/18/first-blog/image.png" alt="alt text"><br><strong>注意：仓库的名称必须是<code>your_username.github.io</code>哦</strong>  </p>
 <h2 id="2-安装nodejs和npm"><a href="#2-安装nodejs和npm" class="headerlink" title="2. 安装nodejs和npm"></a>2. 安装nodejs和npm</h2><p>1、首先在本地安装好nodejs和npm。<br>进入nodejs的官网，下载安装，一路next即可。<br><a target="_blank" rel="noopener" href="https://nodejs.org/en">https://nodejs.org/en</a><br>安装完成之后，运行以下命令，检查nodejs和npm是否安装成功：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-<p>如果出现下面的版本信息，就说明安装成功了：<br><img src="/image-5.png" alt="alt text"></p>
+<p>如果出现下面的版本信息，就说明安装成功了：<br><img src="/2026/01/18/first-blog/image-5.png" alt="alt text"></p>
 <h2 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3. 安装hexo"></a>3. 安装hexo</h2><p>什么是hexo？<br>hexo是一个基于nodejs的静态博客框架，它可以帮助我们快速地创建个人博客，而且有丰富的插件和主题可以选择。<br>对我们来说，可以先不管复杂的hexo配置，只需要知道如何安装和使用hexo命令即可。</p>
 <p>首先在本地安装好hexo。<br>打开git bash，输入以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <p>安装完成后，运行以下命令，检查hexo是否安装成功：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-<p>如果出现类似下面的版本信息，就说明安装成功了：<br><img src="/image-8.png" alt="alt text"></p>
+<p>如果出现类似下面的版本信息，就说明安装成功了：<br><img src="/2026/01/18/first-blog/image-8.png" alt="alt text"></p>
 <p>接下来安装hexo的依赖。<br>为什么要安装依赖，如果不安装依赖，hexo项目在向github推送文章或代码时会失败，所以我们提前安装好就OK了。<br>在hexo项目的根目录下，运行以下命令安装即可：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
 
